@@ -13,7 +13,7 @@ def create_model(my_inputs, my_outputs, my_learning_rate):
       metrics=[keras.metrics.MeanSquaredError()])
   return model
 
-def create_normalized_label(test_df, train_df):
+def create_normalized_label(train_df, test_df):
     train_median_house_value_normalized = keras.layers.Normalization(axis=None)
     train_median_house_value_normalized.adapt(
     np.array(train_df['median_house_value']))
