@@ -11,7 +11,7 @@ x_train_normalized = x_train / 255
 x_test_normalized = x_test / 255
 
 learning_rate = 0.003
-epochs = 2
+epochs = 50
 batch_size = 4000
 validation_split = 0.2
 
@@ -45,4 +45,7 @@ plt.ylabel('number')
 plt.legend()
 plt.grid()
 plt.show()
+
+my_model.save('saved_model/multi_class_model-0.1.keras')
+
 #print(list(y_test))
